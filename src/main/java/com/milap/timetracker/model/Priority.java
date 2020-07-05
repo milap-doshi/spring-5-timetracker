@@ -1,5 +1,8 @@
 package com.milap.timetracker.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Priority extends BaseEntity {
 	private int priorityValue;
 

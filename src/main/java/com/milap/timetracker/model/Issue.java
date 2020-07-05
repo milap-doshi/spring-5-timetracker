@@ -1,13 +1,25 @@
 package com.milap.timetracker.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+
+@Entity
 public class Issue extends BaseEntity {
 	private String number;
+	@Lob
 	private String description;
+	@ManyToOne
 	private Project project;
+	@ManyToOne
 	private Priority priority;
+	@OneToOne
 	private Status status;
 	private double timeLogged;
+	@ManyToOne
 	private User createdByUser;
+	@ManyToOne
 	private User assignedToUser;
 	private double timeEstimated;
 

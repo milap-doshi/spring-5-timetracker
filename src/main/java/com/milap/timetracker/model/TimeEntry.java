@@ -2,8 +2,14 @@ package com.milap.timetracker.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class TimeEntry extends BaseEntity {
+	@ManyToOne
 	private User user;
+	@ManyToOne
 	private Issue issue;
 	private String description;
 	private LocalDate date;
